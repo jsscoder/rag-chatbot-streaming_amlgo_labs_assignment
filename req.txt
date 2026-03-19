@@ -4,3 +4,4 @@ transformers
 torch
 numpy
 faiss-cpu==1.7.4
+PyPDF2
