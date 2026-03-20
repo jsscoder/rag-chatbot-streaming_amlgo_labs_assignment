@@ -71,7 +71,7 @@ rag-chatbot/
 ## ▶️ How to Run
 
 ### 1. Install dependencies
-```bash
+ash
 pip install -r requirements.txt
 2. Run the app
 streamlit run app.py
