@@ -1,10 +1,7 @@
-Got it — here’s your **README.md version (pure markdown, ready to paste in GitHub)** 👇
-
-```md
 # 📄 RAG Chatbot with Streaming (Amlgo Labs Assignment)
 
 ## 🚀 Overview
-This project implements a **Retrieval-Augmented Generation (RAG) chatbot** that answers user queries based on a given document.
+This project implements a **Retrieval-Augmented Generation (RAG) chatbot** that answers user queries strictly based on a given document.
 
 It combines:
 - Semantic search using **FAISS**
@@ -18,7 +15,7 @@ It combines:
 - 🔍 Semantic retrieval using FAISS
 - 🤖 Grounded response generation (no hallucination)
 - ⚡ Streaming responses (word-by-word)
-- 💬 ChatGPT-style UI with chat history
+- 💬 Chat-style UI with chat history
 - 📚 Source display for transparency
 - ❌ Fallback for irrelevant queries ("Not found in document")
 
@@ -26,36 +23,39 @@ It combines:
 
 ## 🧠 Architecture
 
-```
 
 PDF → Chunking → Embeddings → FAISS
 ↓
-User Query → Retrieval → LLM → Streaming → UI
+User Query → Retrieval → Context → LLM → Streaming → UI
 
-```
 
 ---
 
 ## 📁 Project Structure
 
-```
 
 rag-chatbot/
 │
-├── data/              # input document
-├── chunks/            # processed chunks
-├── vectordb/          # FAISS index
+├── data/ # input document
+├── chunks/ # processed chunks
+├── vectordb/ # FAISS index
 │
 ├── src/
-│   ├── ingest.py
-│   ├── retriever.py
-│   └── generator.py
+│ ├── ingest.py
+│ ├── retriever.py
+│ └── generator.py
 │
-├── app.py             # Streamlit app
+├── assets/ # demo + screenshots
+│ ├── demo.gif
+│ ├── preview_one.png
+│ ├── preview_two.png
+│ ├── preview_three.png
+│ └── preview_four.png
+│
+├── app.py # Streamlit app
 ├── requirements.txt
 └── README.md
 
-````
 
 ---
 
@@ -73,67 +73,37 @@ rag-chatbot/
 ### 1. Install dependencies
 ```bash
 pip install -r requirements.txt
-````
-
-### 2. Run the app
-
-```bash
+2. Run the app
 streamlit run app.py
-```
+🧪 Sample Queries
 
----
+What data does eBay collect?
 
-## 🧪 Sample Queries
+What are the user responsibilities?
 
-* What data does eBay collect?
-* What are the user responsibilities?
-* What policies are mentioned?
+What policies are mentioned?
 
-### Irrelevant Query Handling
+❌ Irrelevant Query Handling
 
-* Who is Elon Musk? → *Not found in document*
+Who is Elon Musk? → Not found in document
 
----
+🎞️ Demo
+<p align="center"> <img src="./assets/demo.gif" width="750"/> </p>
+📸 Screenshots
+🖥️ Chat UI
+<p align="center"> <img src="./assets/preview_one.png" width="700"/> </p>
+💬 Streaming Response
+<p align="center"> <img src="./assets/preview_two.png" width="700"/> </p>
+⚡ Retrieval + Answer
+<p align="center"> <img src="./assets/preview_three.png" width="700"/> </p>
+📚 Source Display
+<p align="center"> <img src="./assets/preview_four.png" width="700"/> </p>
+⚠️ Notes
 
-## 🎥 Demo
+Uses similarity threshold + keyword filtering to reduce hallucinations
 
-👉 Add your demo video link here
+Answers are strictly grounded in retrieved document chunks
 
----
-
-## 📸 Screenshots
-
-Add screenshots of:
-
-* Chat UI
-* Streaming response
-* Source display
-
----
-
-## ⚠️ Notes
-
-* The system uses **similarity threshold + keyword filtering** to reduce hallucinations
-* Answers are strictly grounded in retrieved document chunks
-
----
-
-## 👨‍💻 Author
+👨‍💻 Author
 
 Omkar Goje
-
-```
-
----
-
-# ✅ Done
-
-Just:
-- paste into `README.md`
-- add your demo + screenshots
-
----
-
-If you want one last edge:
-👉 say **“report md”** — I’ll give you the **2–3 page report in markdown** (easy PDF convert)
-```
