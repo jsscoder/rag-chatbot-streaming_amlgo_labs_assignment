@@ -98,12 +98,3 @@ Who is Elon Musk? → Not found in document
 <p align="center"> <img src="./assets/preview_three.png" width="700"/> </p>
 📚 Source Display
 <p align="center"> <img src="./assets/preview_four.png" width="700"/> </p>
-⚠️ Notes
-
-Uses similarity threshold + keyword filtering to reduce hallucinations
-
-Answers are strictly grounded in retrieved document chunks
-
-👨‍💻 Author
-
-Omkar Goje
