@@ -76,7 +76,7 @@ pip install -r requirements.txt
 2. Run the app
 streamlit run app.py
 🧪 Sample Queries
-
+```
 What data does eBay collect?
 
 What are the user responsibilities?
